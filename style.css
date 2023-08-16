@@ -33,137 +33,156 @@ body{
     font-size: var(--Font-size);
     display: grid;
     place-items: center;
-}
-#card{
+
+    & #card{
     background-color: white;
     border-radius: 10px;
     width: 750px;
     height: max-content;
     display: flex;
     flex-direction: column;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);  
+    
+    & .community{
+        background-color: white;
+        width: 100%;
+        height: 50%;
+        padding: 3rem;
+        border-radius: 10px 10px 0 0;
+
+        & h2{
+        color: var(--Cyan);
+        font-size: 1.8rem;
+        margin-bottom: 1.7rem;
+        opacity: 1.3;
+        }
+
+        & h3{
+            color: var(--Bright-Yellow);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        & p{
+            color: var(--Grayish-Blue);
+            line-height: 1.8;
+            width: 90%;
+        }
+    }
+    
+    & .bottom{
+        display: flex;
+        flex-direction: row;
+        height: 50%;
+
+        & .subscription, & .why_us{
+            width: 50%;
+            height: 100%;
+            color: white;
+
+            & h3{
+                font-size: 1.3rem;
+                margin-bottom: 1.7rem;
+            }
+            &  p{
+                color: var(--Light-Gray);
+                line-height: 1.5;
+                width: 100%;
+            }
+        }
+
+        & .subscription {
+            background-color: var(--Cyan);
+            border-radius: 0 0 0 10px;
+            padding: 2.7rem;
+            opacity: 1.3;
+            & p{
+                margin-bottom: 1.65rem;
+            }
+            & .price{
+                margin-bottom: 0;
+
+                & span{
+                    color:var(--Light-Gray);
+                    font-size: 16px;
+                    position: absolute;
+                    margin-top: 1.2rem;
+                     opacity: .6;
+                }
+                & b{
+                    font-size: 2.7rem;
+                    color: white;
+                    margin-right: .7rem;
+                }
+            }
+            & .btn{
+                width: 100%;
+                border: none;
+                border-radius: 5px;
+                background-color: var(--Bright-Yellow);
+                color: white;
+                height: 3.3rem;
+                cursor: pointer;
+                box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+            }
+            & .btn:hover{
+                cursor: pointer;
+                opacity: .9;
+            }
+        }
+        & .why_us{
+            background-color: var(--Cyan);
+            border-radius: 0 0 10px 0 ;
+            opacity: .8;
+            padding: 2.7rem; 
+        }
+    }
 }
-.community{
-    background-color: white;
-    width: 100%;
-    height: 50%;
-    padding: 3rem;
-    border-radius: 10px 10px 0 0;
 }
-.community > h2{
-    color: var(--Cyan);
-    font-size: 1.8rem;
-    margin-bottom: 1.7rem;
-    opacity: 1.3;
-}
-.community > h3{
-    color: var(--Bright-Yellow);
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
-.community > p{
-    color: var(--Grayish-Blue);
-    line-height: 1.8;
-    width: 90%;
-}
-.bottom{
-    display: flex;
-    flex-direction: row;
-    height: 50%;
-}
-.subscription,.why_us{
-width: 50%;
-height: 100%;
- color: white;
-}
-.subscription {
-    background-color: var(--Cyan);
-    border-radius: 0 0 0 10px;
-    padding: 2.7rem;
-    opacity: 1.3;
-}
-.subscription > h3 ,.why_us > h3{
-    font-size: 1.3rem;
-    margin-bottom: 1.7rem;
-}
-.subscription > .price{
-    margin-bottom: 0;
-}
-.subscription > .price > span{
-    color:var(--Light-Gray);
-    font-size: 16px;
-    position: absolute;
-    margin-top: 1.2rem;
-    opacity: .6;
-}
-b{
-    font-size: 2.7rem;
-    color: white;
-    margin-right: .7rem;
-}
-.subscription > p{
-    margin-bottom: 1.65rem;
-}
-.why_us{
-    background-color: var(--Cyan);
-    border-radius: 0 0 10px 0 ;
-    opacity: .8;
-    padding: 2.7rem; 
-}
-.btn{
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--Bright-Yellow);
-    color: white;
-    height: 3.3rem;
-    cursor: pointer;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
-}
-.btn:hover{
-    cursor: pointer;
-    opacity: .9;
-}
-.why_us > p,.subscription > p{
-    color: var(--Light-Gray);
-    line-height: 1.5;
-    width: 100%;
-}
+
 @media (max-width:650px) {
     body{
         height: 100%;
-    }
-    #card{
+    
+    & #card{
         margin: 5rem 0 5rem 0;
         width: 90%;
         padding: 0;
-    }
-    .community{
+    
+    & .community{
         width: 100%;
         padding: 1.7rem ;
+
+        & h2{
+            font-size: 1.5rem;
+        }
+        & h3{
+        font-size: 1.1rem;
+        }
+        & p{
+            width: 100%;
+        }
     }
-    .bottom{
+    
+     & .bottom{
         flex-direction: column;
         width: 100%;
         padding: 0;
-    }
-    .subscription,.why_us{
+
+    & .subscription,& .why_us{
         width: 100%;
         padding: 2rem;
     }
-    .subscription{
+
+    & .subscription{
         border-radius: 0;
     }
-    .why_us{
+
+    & .why_us{
         border-radius: 0 0 10px 10px;
     }
-    .community > h2{
-        font-size: 1.5rem;
     }
-    .community > h3{
-    font-size: 1.1rem;
-    }
-    .community > p{
-        width: 100%;
-    }
+    
+}
+}
 }
