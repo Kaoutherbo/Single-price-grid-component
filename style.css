@@ -31,21 +31,19 @@ body{
     font-family: var(--Font-Family);
     background-color: var(--Light-Gray);
     font-size: var(--Font-size);
+    display: grid;
+    place-items: center;
 }
 #card{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     background-color: white;
     border-radius: 10px;
-    width: 720px;
+    width: 750px;
     height: max-content;
     display: flex;
     flex-direction: column;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
-.community {
+.community{
     background-color: white;
     width: 100%;
     height: 50%;
@@ -109,7 +107,7 @@ b{
 .why_us{
     background-color: var(--Cyan);
     border-radius: 0 0 10px 0 ;
-    opacity: .75;
+    opacity: .8;
     padding: 2.7rem; 
 }
 .btn{
@@ -122,20 +120,23 @@ b{
     cursor: pointer;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
+.btn:hover{
+    cursor: pointer;
+    opacity: .9;
+}
 .why_us > p,.subscription > p{
     color: var(--Light-Gray);
     line-height: 1.5;
     width: 100%;
 }
-@media (max-width:400px) {
+@media (max-width:650px) {
     body{
         height: 100%;
     }
     #card{
-        transform: translate(-50%,10%);
+        margin: 5rem 0 5rem 0;
         width: 90%;
         padding: 0;
-        margin-bottom: 5rem;
     }
     .community{
         width: 100%;
@@ -163,6 +164,6 @@ b{
     font-size: 1.1rem;
     }
     .community > p{
-        width: 110%;
+        width: 100%;
     }
 }
